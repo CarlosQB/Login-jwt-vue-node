@@ -50,19 +50,22 @@ Fue desarrollado con fines de aprendizaje y como parte de un portafolio personal
 
 ## Login
 
-**IMAGEN DE EJEMPLO**
+<img width="452" height="460" alt="image" src="https://github.com/user-attachments/assets/1d95f143-954d-4050-a877-e08f3644cf10" />
+
 
 ---
 
 ## Registro
 
-**IMAGEN DE EJEMPLO**
+<img width="430" height="541" alt="image" src="https://github.com/user-attachments/assets/7692795b-e07b-4e8b-999f-bbe63b31be56" />
+
 
 ---
 
 ## Dashboard
 
-**IMAGEN DE EJEMPLO**
+<img width="1600" height="775" alt="image" src="https://github.com/user-attachments/assets/6e2da389-102f-4239-b2b1-0a475d862750" />
+
 
 ---
 
