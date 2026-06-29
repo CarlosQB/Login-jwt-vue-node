@@ -1,23 +1,25 @@
-# CRUD de Clientes con Vue.js, Express, Sequelize y JWT
+# Sistema de Autenticación con Vue.js, Express, JWT y MySQL
 
 ## Descripción
 
-Aplicación web Full Stack para la gestión de clientes, desarrollada con Vue.js en el frontend y Express.js en el backend. El sistema implementa operaciones CRUD, autenticación mediante JWT, cifrado de contraseñas con bcrypt y persistencia de datos utilizando MySQL.
+Aplicación Full Stack que implementa un sistema de autenticación de usuarios utilizando **Vue.js** en el frontend y **Node.js + Express** en el backend.
 
-Este proyecto fue desarrollado con fines de aprendizaje para fortalecer conocimientos en desarrollo Full Stack utilizando tecnologías modernas del ecosistema JavaScript.
+El proyecto permite el registro e inicio de sesión de usuarios mediante **JSON Web Tokens (JWT)**, almacenamiento seguro de contraseñas con **bcrypt** y persistencia de datos en **MySQL** utilizando **Sequelize ORM**.
+
+Fue desarrollado con fines de aprendizaje y como parte de un portafolio personal para demostrar conocimientos en desarrollo Full Stack.
 
 ---
 
-## Tecnologías utilizadas
+# Tecnologías utilizadas
 
-### Frontend
+## Frontend
 
 * Vue.js 3
 * Axios
 * Heroicons
 * CSS3
 
-### Backend
+## Backend
 
 * Node.js
 * Express.js
@@ -25,69 +27,89 @@ Este proyecto fue desarrollado con fines de aprendizaje para fortalecer conocimi
 * JWT (JSON Web Token)
 * bcrypt
 
-### Base de datos
+## Base de datos
 
 * MySQL
 
 ---
 
-## Funcionalidades
+# Funcionalidades
 
 * Registro de usuarios
-* Inicio y cierre de sesión
+* Inicio de sesión
+* Cierre de sesión
 * Autenticación mediante JWT
 * Contraseñas cifradas con bcrypt
-* Crear clientes
-* Consultar clientes
-* Editar clientes
-* Eliminar clientes
-* Búsqueda por nombre
-* Contador de clientes registrados
-* Notificaciones tipo Toast
+* Dashboard protegido
+* Persistencia de sesión mediante LocalStorage
 * Interfaz moderna y responsive
 
 ---
 
-## Estructura del proyecto
+# Capturas del proyecto
 
-```
-crud-clientes/
+## Login
+
+**IMAGEN DE EJEMPLO**
+
+---
+
+## Registro
+
+**IMAGEN DE EJEMPLO**
+
+---
+
+## Dashboard
+
+**IMAGEN DE EJEMPLO**
+
+---
+
+# Estructura del proyecto
+
+```text
+login-jwt-vue-node/
 │
 ├── backend/
-│   ├── config/
-│   ├── controllers/
-│   ├── middleware/
-│   ├── models/
-│   ├── routes/
-│   ├── app.js
-│   └── package.json
+│   ├── src/
+│   │   ├── controllers/
+│   │   ├── db/
+│   │   ├── middleware/
+│   │   ├── models/
+│   │   ├── routes/
+│   │   └── app.js
+│   │
+│   ├── package.json
+│   └── .env.example
 │
 ├── frontend/
 │   ├── src/
 │   │   ├── assets/
-│   │   ├── components/
 │   │   ├── services/
 │   │   ├── views/
 │   │   ├── App.vue
 │   │   └── main.js
-│   └── package.json
+│   │
+│   ├── package.json
+│   └── vite.config.js
 │
 └── README.md
 ```
 
 ---
 
-## Instalación
+# Instalación
 
-### Clonar el repositorio
+## 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/TU-USUARIO/crud-clientes.git
+git clone https://github.com/TU-USUARIO/login-jwt-vue-node.git
 ```
 
 ---
 
-### Backend
+## 2. Backend
 
 Entrar a la carpeta:
 
@@ -101,6 +123,8 @@ Instalar dependencias:
 npm install
 ```
 
+Crear un archivo `.env` utilizando como referencia `.env.example`.
+
 Iniciar el servidor:
 
 ```bash
@@ -109,7 +133,7 @@ npm run dev
 
 ---
 
-### Frontend
+## 3. Frontend
 
 Entrar a la carpeta:
 
@@ -131,32 +155,40 @@ npm run dev
 
 ---
 
-## Base de datos
+# Variables de entorno
 
-Crear una base de datos en MySQL.
+Crear un archivo `.env` dentro del directorio **backend**.
 
-Ejecutar las migraciones o sincronizar los modelos mediante Sequelize.
+Ejemplo:
 
-Configurar la conexión en el archivo correspondiente del backend.
-
----
-
-## Próximas mejoras
-
-* Protección de rutas mediante middleware JWT
-* Variables de entorno (.env)
-* Vue Router
-* Validaciones más robustas
-* Panel de administración
-* Despliegue en la nube (Render y Vercel)
+```env
+DB_NAME=login_jwt_db
+DB_USER=root
+DB_PASSWORD=tu_password
+DB_HOST=localhost
+PORT=5000
+JWT_SECRET=tu_clave_secreta
+```
 
 ---
 
-## Autor
+# Próximas mejoras
+
+* Recuperación de contraseña
+* Confirmación de correo electrónico
+* Roles de usuario (Administrador / Usuario)
+* Protección avanzada de rutas
+* Edición de perfil
+* Despliegue en Render y Vercel
+
+---
+
+# Autor
 
 **Jose Carlos Quezada Benavides**
 
 Ingeniero en Ciencias Computacionales
 
 GitHub:
+
 https://github.com/CarlosQB

@@ -18,7 +18,13 @@ const iniciarSesion = async () => {
     });
 
     localStorage.setItem("token", respuesta.token);
+
+    if (respuesta.usuario) {
+      localStorage.setItem("usuario", JSON.stringify(respuesta.usuario));
+    }
+
     emit("login-correcto");
+
   } catch (err) {
     error.value = "Correo o contraseña incorrectos.";
   }
@@ -29,7 +35,7 @@ const iniciarSesion = async () => {
   <main class="auth-page">
     <section class="auth-card">
       <h1>Iniciar Sesión</h1>
-      <p>Accede al sistema CRUD de clientes.</p>
+      <p>Accede a tu panel personal.</p>
 
       <form class="auth-form" @submit.prevent="iniciarSesion">
         <input

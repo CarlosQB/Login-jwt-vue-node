@@ -43,7 +43,7 @@ const registrarUsuario = async () => {
   <main class="auth-page">
     <section class="auth-card">
       <h1>Crear cuenta</h1>
-      <p>Regístrate para acceder al sistema CRUD.</p>
+      <p>Regístrate para acceder al sistema.</p>
 
       <form class="auth-form" @submit.prevent="registrarUsuario">
         <input

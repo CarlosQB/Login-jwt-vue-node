@@ -6,7 +6,7 @@ import {
   buscarUsuarioPorCorreo
 } from "../models/usuario.model.js";
 
-const SECRET_KEY = "mi_clave_secreta";
+const SECRET_KEY = process.env.JWT_SECRET || "mi_clave_secreta";
 
 async function registrar(req, res) {
   try {
@@ -66,10 +66,15 @@ async function login(req, res) {
       { expiresIn: "1h" }
     );
 
-    res.json({
-      mensaje: "Login correcto",
-      token
-    });
+   res.json({
+  mensaje: "Login correcto",
+  token,
+  usuario: {
+    id: usuario.id,
+    nombre: usuario.nombre,
+    correo: usuario.correo
+  }
+});
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Error al iniciar sesión" });

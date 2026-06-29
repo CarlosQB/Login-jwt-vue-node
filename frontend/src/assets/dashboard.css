@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+}
+
+.dashboard-page {
+  min-height: 100vh;
+  background: #f3f6fb;
+  padding: 34px;
+  color: #172033;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #1d4ed8;
+  font-size: 26px;
+  font-weight: 800;
+}
+
+.brand-icon,
+.btn-icon,
+.card-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.btn-logout {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  background: #ef4444;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.welcome-card,
+.details-card,
+.account-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.welcome-card {
+  padding: 42px;
+  margin-bottom: 28px;
+}
+
+.badge {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.welcome-card h1 {
+  font-size: 44px;
+  margin: 24px 0 10px;
+}
+
+.welcome-card p {
+  color: #64748b;
+  font-size: 18px;
+}
+
+.account-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  margin-bottom: 28px;
+}
+
+.account-card {
+  padding: 28px;
+}
+
+.card-icon {
+  color: #2563eb;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 18px;
+}
+
+.account-card h2 {
+  margin-bottom: 8px;
+}
+
+.account-card p {
+  color: #64748b;
+}
+
+.details-card {
+  padding: 32px;
+}
+
+.details-card h2 {
+  margin-bottom: 22px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 16px 0;
+}
+
+.detail-row span {
+  color: #64748b;
+}
+
+.status {
+  color: #16a34a;
+}
+
+@media (max-width: 900px) {
+  .account-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-page {
+    padding: 20px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .account-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .welcome-card h1 {
+    font-size: 34px;
+  }
+}
+.bottom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.profile-card,
+.actions-card {
+  background: white;
+  border-radius: 24px;
+  padding: 34px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.profile-avatar {
+  width: 90px;
+  height: 90px;
+  color: #2563eb;
+}
+
+.profile-card h2,
+.actions-card h2 {
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  color: #64748b;
+  margin-bottom: 14px;
+}
+
+.status-pill {
+  display: inline-block;
+  background: #dcfce7;
+  color: #166534;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.action-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.action-list button {
+  border: none;
+  background: #eef2ff;
+  color: #1d4ed8;
+  padding: 14px 18px;
+  border-radius: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: left;
+}
+
+.action-list button:hover {
+  background: #dbeafe;
+}
+
+@media (max-width: 800px) {
+  .bottom-grid {
+    grid-template-columns: 1fr;
+  }
+}

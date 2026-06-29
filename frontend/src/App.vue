@@ -1,9 +1,10 @@
 <script setup>
 import { ref } from "vue";
-
+import "./assets/auth.css";
+import "./assets/dashboard.css";
 import LoginView from "./views/LoginView.vue";
 import RegisterView from "./views/RegisterView.vue";
-import ClientesView from "./views/ClientesView.vue";
+import DashboardView from "./views/DashboardView.vue";
 
 import "./assets/clientes.css";
 import "./assets/auth.css";
@@ -17,25 +18,29 @@ const loginCorrecto = () => {
 
 const cerrarSesion = () => {
   localStorage.removeItem("token");
+  localStorage.removeItem("usuario");
   token.value = null;
   vista.value = "login";
 };
 </script>
 
 <template>
+  <!-- Login -->
   <LoginView
     v-if="!token && vista === 'login'"
     @login-correcto="loginCorrecto"
     @ir-registro="vista = 'registro'"
   />
 
+  <!-- Registro -->
   <RegisterView
-    v-if="!token && vista === 'registro'"
+    v-else-if="!token && vista === 'registro'"
     @ir-login="vista = 'login'"
   />
 
-  <ClientesView
-    v-if="token"
+  <!-- Dashboard -->
+  <DashboardView
+    v-else
     @cerrar-sesion="cerrarSesion"
   />
 </template>
